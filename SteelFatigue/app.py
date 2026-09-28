@@ -5,8 +5,7 @@ import os
 
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 
-st.write("Files in app folder:")
-st.write(os.listdir(BASE_DIR))
+
 
 MODEL_PATH = os.path.join(BASE_DIR, "fatigue_model_10.pkl")
 
