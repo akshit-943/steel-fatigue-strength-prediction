@@ -1,11 +1,16 @@
 import streamlit as st
 import pandas as pd
 import joblib
+import os
 
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 
-model_path = os.path.join(os.path.dirname(__file__), "fatigue_model_10.pkl")
-model = joblib.load(model_path)
+st.write("Files in app folder:")
+st.write(os.listdir(BASE_DIR))
 
+MODEL_PATH = os.path.join(BASE_DIR, "fatigue_model_10.pkl")
+
+model = joblib.load(MODEL_PATH)
 
 st.title("Steel Fatigue Strength Prediction")
 
