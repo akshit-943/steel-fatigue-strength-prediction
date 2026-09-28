@@ -3,7 +3,8 @@ import pandas as pd
 import joblib
 
 
-model = joblib.load("fatigue_model_10.pkl")
+model_path = os.path.join(os.path.dirname(__file__), "fatigue_model_10.pkl")
+model = joblib.load(model_path)
 
 
 st.title("Steel Fatigue Strength Prediction")
